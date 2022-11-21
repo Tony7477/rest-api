@@ -16,7 +16,7 @@ import java.util.List;
 public class TopicService {
 
 
-    @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
+
     @Autowired
     private TopicRepository topicRepository;
     private List<Topic> topics=new ArrayList<>( Arrays.asList(new Topic("java","core-java","this is about core java"),
@@ -36,6 +36,8 @@ public class TopicService {
     }
 
     public void addTopic(Topic topic) {
+
+
         topicRepository.save(topic);
     }
 
